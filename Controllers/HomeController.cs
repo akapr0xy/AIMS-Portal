@@ -48,6 +48,13 @@ namespace AIMS_Portal.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            ViewData["Message"] = "Login Here.";
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

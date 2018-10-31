@@ -6,13 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="CryptoHelper" Version="3.0.2" />
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

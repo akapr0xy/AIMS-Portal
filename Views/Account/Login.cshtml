@@ -1,0 +1,12 @@
+﻿
+
+@{
+    // see :http://getbootstrap.com/docs/3.3/examples/signin/
+    ViewBag.Title = "Login";
+    Layout = "_LoginLayout";
+}
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

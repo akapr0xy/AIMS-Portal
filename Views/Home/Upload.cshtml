@@ -1,16 +1,32 @@
 ﻿@{
     ViewData["Title"] = "Upload";
 }
-<h2>@ViewData["Title"]</h2>
 
 
+<br />
 
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/UploadFilesCSS.css"/>
+</environment>
 
-<div class="form-group">
-    <form>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Upload Your Deliverables Here</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+<div class="contact-image">
+    <img src="~/images/aimslogo.svg" alt="aims_companies" />
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-8">
+            <br><br>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" readonly>
+                    <div class="input-group-btn">
+                        <span class="fileUpload btn btn-info">
+                            <span class="upl" id="upload">Upload Your File(s)</span>
+                            <input type="file" class="upload up" id="up" onchange="readURL(this);" multiple />
+                        </span><!-- btn-orange -->
+                    </div><!-- btn -->
+                </div><!-- group -->
+            </div><!-- form-group -->
         </div>
-    </form>
-    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </div>
