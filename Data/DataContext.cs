@@ -9,5 +9,7 @@ namespace AIMS_Portal.Data
     public class DataContext : DbContext
     {
         public DbSet<User> User { get; set; }
+
+
     }
 }
