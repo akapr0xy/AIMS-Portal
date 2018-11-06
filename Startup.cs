@@ -40,10 +40,11 @@ namespace AIMS_Portal
                     options.LogoutPath = "/Home/Index";
                 });
             services.AddMvc();
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+            services.AddScoped<DbContext, DataContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
