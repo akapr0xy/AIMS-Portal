@@ -13,7 +13,26 @@
 <form>
     <div class="form-group">
         <label for="inputCompany">Company Name</label>
-        <input type="text" class="form-control" id="inputCompany" placeholder="Company Name" />
+        <br />
+        <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select A Company
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <a class="dropdown-item" href="#">AIMS Companies</a>
+                <br />
+                <a class="dropdown-item" href="#">Dibble Engineering</a>
+                <br />
+                <a class="dropdown-item" href="#">Sahuaro Contracting</a>
+                <br />
+                <a class="dropdown-item" href="#">BluCor Contracting</a>
+                <br />
+                <div class="dropdown-divider"></div>
+                <br />
+                <a class="dropdown-item" href="#">Add New Company</a>
+            </div>
+        </div>
+        <br />
         <br />
         <label for="inputLocation">Job Location</label>
         <input type="text" class="form-control" id="inputLocation" placeholder="Job Location" />
