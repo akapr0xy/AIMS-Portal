@@ -8,8 +8,14 @@ namespace AIMS_Portal.Data
 {
     public class DataContext : DbContext
     {
-        public DbSet<User> User { get; set; }
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
 
+        }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+        }
     }
 }
