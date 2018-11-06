@@ -30,10 +30,14 @@
                 <li><a href="#" data-value="dibble engineering">Dibble Engineering</a></li>
                 <li><a href="#" data-value="sahuaro contracting">Sahuaro Contracting</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#" data-value="create new">Create New Company</a></li>
+                <li><a href="#" id="newCompany" data-value="new company">Create New Company</a></li>
             </ul>
         </div>
 
+        <div id="createNew" style="display: none">
+            <label for="inputCompany">Company Name</label>
+            <input type="text" class="form-control" id="inputCompany" placeholder="Input Company Name" />
+        </div>
         <br />
         <label for="inputLocation">Job Location</label>
         <input type="text" class="form-control" id="inputLocation" placeholder="Job Location" />
@@ -61,11 +65,19 @@
         </div>
     </div>
 </div>
+
 <input class="btn btn-primary" type="submit" value="Submit">
 
 <script>
     $(".dropdown-menu li a").click(function () {
         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+
+        if ($(this).val() == 'new company') {
+            $('#createNew').show();
+        }
+        else {
+            $('#createNew').hide();
+        }
     });
 </script>
