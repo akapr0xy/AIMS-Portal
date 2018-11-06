@@ -24,5 +24,8 @@ namespace AIMS_Portal.Models
         [Required(ErrorMessage = "Please confirm your password.")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Company name is required.")]
+        public string CompanyName { get; set; }
     }
 }

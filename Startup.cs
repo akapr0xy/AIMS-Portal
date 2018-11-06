@@ -40,7 +40,7 @@ namespace AIMS_Portal
                     options.LogoutPath = "/Home/Index";
                 });
             services.AddMvc();
-            var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<DbContext, DataContext>();
 
