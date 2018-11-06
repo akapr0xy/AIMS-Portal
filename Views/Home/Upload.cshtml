@@ -1,8 +1,11 @@
-﻿<br />
+﻿<environment include="Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/UploadFilesCSS.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<environment include="Development">
-    <link rel="stylesheet" href="~/css/UploadFilesCSS.css"/>
 </environment>
+
+<br />
 
 <div class="contact-image">
     <img src="~/images/aimslogo.svg" alt="aims_companies" class="center-block"/>
@@ -14,25 +17,21 @@
     <div class="form-group">
         <label for="inputCompany">Company Name</label>
         <br />
-        <div class="btn-group">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Select A Company
+                <span class="caret"></span>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <a class="dropdown-item" href="#">AIMS Companies</a>
-                <br />
-                <a class="dropdown-item" href="#">Dibble Engineering</a>
-                <br />
-                <a class="dropdown-item" href="#">Sahuaro Contracting</a>
-                <br />
-                <a class="dropdown-item" href="#">BluCor Contracting</a>
-                <br />
-                <div class="dropdown-divider"></div>
-                <br />
-                <a class="dropdown-item" href="#">Add New Company</a>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                <li><a href="#" data-value="aims companies">AIMS Companies</a></li>
+                <li><a href="#" data-value="blucor contracting">BluCor Contracting</a></li>
+                <li><a href="#" data-value="dibble engineering">Dibble Engineering</a></li>
+                <li><a href="#" data-value="sahuaro contracting">Sahuaro Contracting</a></li>
+            </ul>
         </div>
-        <br />
+
         <br />
         <label for="inputLocation">Job Location</label>
         <input type="text" class="form-control" id="inputLocation" placeholder="Job Location" />
@@ -61,3 +60,10 @@
     </div>
 </div>
 <input class="btn btn-primary" type="submit" value="Submit">
+
+<script>
+    $(".dropdown-menu li a").click(function () {
+        $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+        $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+    });
+</script>
