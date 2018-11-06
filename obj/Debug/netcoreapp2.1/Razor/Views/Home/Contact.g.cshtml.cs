@@ -65,7 +65,7 @@ using AIMS_Portal.Models;
             WriteLiteral("\r\n<br/>\r\n\r\n<div class=\"contact-image\">\r\n    ");
             EndContext();
             BeginContext(87, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ec49a4e7d8544f939fa8b7720a4f2ba7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "31d241abbeae45729f881db2a5d1f970", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -85,7 +85,7 @@ using AIMS_Portal.Models;
             WriteLiteral("\r\n</div>\r\n\r\n<div class=\"container contact-form\">\r\n    ");
             EndContext();
             BeginContext(218, 1152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c48dfcc7282a4036abef1b5406f066ad", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d36fbd6e0aae40918bfe61e9e0cae32e", async() => {
                 BeginContext(238, 1125, true);
                 WriteLiteral(@"
         <h3>Drop Us a Message</h3>
