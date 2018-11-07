@@ -24,19 +24,20 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-                <li><a href="#" data-value="aims companies">AIMS Companies</a></li>
-                <li><a href="#" data-value="blucor contracting">BluCor Contracting</a></li>
-                <li><a href="#" data-value="dibble engineering">Dibble Engineering</a></li>
-                <li><a href="#" data-value="sahuaro contracting">Sahuaro Contracting</a></li>
+                <li><a href="#" data-value="aimsCompanies">AIMS Companies</a></li>
+                <li><a href="#" data-value="blucorContracting">BluCor Contracting</a></li>
+                <li><a href="#" data-value="dibbleEngineering">Dibble Engineering</a></li>
+                <li><a href="#" data-value="sahuaroContracting">Sahuaro Contracting</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#" id="newCompany" data-value="new company">Create New Company</a></li>
+                <li><a href="#" id="newCompany" value="newCompany">Create New Company</a></li>
             </ul>
         </div>
-
-        <div id="createNew" style="display: none">
+        
+        <div id="createNew" style="display:none;">
+            <br />
             <label for="inputCompany">Company Name</label>
             <input type="text" class="form-control" id="inputCompany" placeholder="Input Company Name" />
+
         </div>
         <br />
         <label for="inputLocation">Job Location</label>
@@ -73,17 +74,11 @@
         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
 
-        var x = document.getElementById("createNew");
-
-        //if ($(this).val() == '#newCompany') {
-        //    $('#createNew').show();
-        //}
-        //else {
-        //    $('#newCompany').hide();
-        //}
-
-        if (x.val == "newCompany") {
-
+        if ($(this).val() == "#newCompany") {
+            $('#createNew').hide();
+        }
+        else {
+            $('#createNew').show();
         }
     });
 </script>
