@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -9,85 +10,31 @@ namespace AIMS_Portal.Controllers
 {
     public class UploadFilesController : Controller
     {
-        // GET: UploadFiles
-        public ActionResult Index()
+        #region snippet1
+        [HttpPost("UploadFiles")]
+        public async Task<IActionResult> Post(List<IFormFile> files)
         {
-            return View();
-        }
+            long size = files.Sum(f => f.Length);
 
-        // GET: UploadFiles/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+            // full path to file in temp location
+            var filePath = Path.GetTempFileName();
 
-        // GET: UploadFiles/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: UploadFiles/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
+            foreach (var formFile in files)
             {
-                // TODO: Add insert logic here
+                if (formFile.Length > 0)
+                {
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await formFile.CopyToAsync(stream);
+                    }
+                }
+            }
 
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            // process uploaded files
+            // Don't rely on or trust the FileName property without validation.
+
+            return Ok(new { count = files.Count, size, filePath });
         }
-
-        // GET: UploadFiles/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: UploadFiles/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: UploadFiles/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: UploadFiles/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        #endregion
     }
 }

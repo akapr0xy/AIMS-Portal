@@ -17,5 +17,8 @@ namespace AIMS_Portal.Data
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
+
+        public DbSet<AIMS_Portal>
+
     }
 }
