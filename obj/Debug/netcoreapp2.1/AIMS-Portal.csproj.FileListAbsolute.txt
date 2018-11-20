@@ -35,3 +35,4 @@ C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcore
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\Razor\Views\Home\Login.g.cshtml.cs
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginLayout.g.cshtml.cs
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\Razor\Views\Account\Logout.g.cshtml.cs
