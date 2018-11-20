@@ -19,7 +19,11 @@ namespace AIMS_Portal.Data
             
         }
 
-        public DbSet<AIMS_Portal.Features.User> User { get; set; }
+        public DbSet<Features.User> User { get; set; }
+
+        public DbSet<Features.Deliverable.Job> Job { get; set; }
+
+        public DbSet<Features.Companies.Company> Company { get; set; }
 
     }
 }
