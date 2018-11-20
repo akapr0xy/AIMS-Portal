@@ -12,6 +12,9 @@ namespace AIMS_Portal.Features.Deliverable
         public int JobId { get; set; }
 
         [Required]
+        public string JobName { get; set; }
+
+        [Required]
         public Company CompanyName { get; set; }
 
         [DataType(DataType.DateTime)]
