@@ -69,7 +69,7 @@ using AIMS_Portal.Models;
             WriteLiteral("\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        ");
             EndContext();
             BeginContext(198, 338, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed33db6346db42f2950e035448c84931", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "418f411eb78a46c5ad7594ca7149390b", async() => {
                 BeginContext(298, 231, true);
                 WriteLiteral("\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li>\r\n                    <button type=\"submit\" class=\"btn btn-link navbar-btn navbar-link\">Logout</button>\r\n                </li>\r\n            </ul>\r\n        ");
                 EndContext();

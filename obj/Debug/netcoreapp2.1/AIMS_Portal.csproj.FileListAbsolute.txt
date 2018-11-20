@@ -36,3 +36,4 @@ C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcore
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\AIMS_Portal.dll
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\AIMS_Portal.pdb
 C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\AIMS_Portal.csproj.CopyComplete
+C:\Users\Administrator-PC\source\repos\AIMS-Portal\AIMS-Portal\obj\Debug\netcoreapp2.1\Razor\Models\Companies\CreateViewModel.g.cshtml.cs
