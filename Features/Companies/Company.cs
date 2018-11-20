@@ -12,7 +12,5 @@ namespace AIMS_Portal.Features.Companies
 
         [Required]
         public string CompanyName { get; set; }
-
-        
     }
 }

@@ -16,8 +16,6 @@ namespace AIMS_Portal.Features.Deliverable
 
         [DataType(DataType.DateTime)]
         [Required]
-        public DateTimeOffset DateCompleted { get; set; }
-
-        
+        public DateTimeOffset DateCompleted { get; set; } 
     }
 }
