@@ -16,9 +16,10 @@ namespace AIMS_Portal.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            
         }
 
-        public DbSet<AIMS_Portal>
+        public DbSet<AIMS_Portal.Features.User> User { get; set; }
 
     }
 }

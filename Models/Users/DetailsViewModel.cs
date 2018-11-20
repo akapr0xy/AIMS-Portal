@@ -8,6 +8,8 @@ namespace AIMS_Portal.Models.Users
 {
     public class DetailsViewModel
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Email is required")]
         [DataType(DataType.EmailAddress)]
         [MaxLength(64)]

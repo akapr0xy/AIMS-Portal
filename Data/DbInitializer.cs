@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using CryptoHelper;
 using AIMS_Portal.Helpers;
+using AIMS_Portal.Features;
+using AIMS_Portal.Features.Users;
 
 namespace AIMS_Portal.Data
 {
